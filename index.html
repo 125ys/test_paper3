@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실험실 탈출 퀴즈</title>
+    <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 배경 컨테이너 -->
+    <div class="background-container">
+        <!-- 클릭 가능한 오브젝트 -->
+        <div id="object1" class="clickable-object" style="top: 65%; left: 38%;"></div>
+        <div id="object2" class="clickable-object" style="top: 60%; left: 51%;"></div>
+        <div id="object3" class="clickable-object" style="top: 70%; left: 60%;"></div>
+    </div>
+
+    <!-- 퀴즈 모달 -->
+    <div id="quiz-modal" class="modal">
+        <div class="modal-content">
+            <p id="question"></p>
+            <input type="text" id="answer-input" placeholder="정답을 입력하세요">
+            <button id="submit-answer">정답 확인</button>
+            <p id="result-message"></p>
+        </div>
+    </div>
+
+    <!-- JavaScript 파일 연결 -->
+    <script src="script.js"></script>
+</body>
+</html>

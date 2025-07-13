@@ -1,0 +1,89 @@
+/* 전체 페이지 기본 스타일 */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 스크롤바 제거 */
+}
+
+/* 배경 컨테이너 스타일 */
+.background-container {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.ibb.co/9kvvkNct/labimg1.jpg');
+    background-size: cover; /* 이미지가 화면에 꽉 차도록 설정 */
+    background-position: center; /* 이미지 중앙 정렬 */
+    position: relative; /* 자식 요소의 position 기준이 됨 */
+}
+
+/* 클릭 가능한 오브젝트 공통 스타일 */
+.clickable-object {
+    position: absolute; /* 절대 위치 설정 */
+    width: 80px;  /* 오브젝트의 너비 */
+    height: 80px; /* 오브젝트의 높이 */
+    cursor: pointer; /* 마우스 오버 시 커서 모양 변경 */
+    /* 개발 확인용: border: 2px solid red; */
+}
+
+/* 퀴즈 모달 배경 스타일 */
+.modal {
+    display: none; /* 기본적으로 숨김 */
+    position: fixed; /* 화면에 고정 */
+    z-index: 1; /* 다른 요소들 위에 표시 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6); /* 반투명 검은 배경 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+/* 퀴즈 모달 콘텐츠 스타일 */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* 퀴즈 모달 내부 요소 스타일 */
+#question {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#answer-input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#submit-answer {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#submit-answer:hover {
+    background-color: #0056b3;
+}
+
+#result-message {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
